@@ -1297,7 +1297,7 @@ table thead {
 /* Section/Article */
 section,
 article {
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
 }
 section > :last-child, section:last-child,
 article > :last-child,
@@ -1339,6 +1339,7 @@ footer {
   background: #ffffff;
   border-bottom: solid 1px #ccc;
   padding: 2.75em 1.75em 2.75em 1.75em;
+  box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.3);
 }
 .box .image.featured {
   position: relative;
@@ -2548,6 +2549,12 @@ article {
 
 .smallfont {
   font-size: 0.8em;
+}
+
+.h2font {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #ff3939;
 }
 
 .floatF {

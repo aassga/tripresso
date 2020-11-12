@@ -10,12 +10,15 @@
           section
             header.major
             .row
-              .col-4.col-6-medium.col-12-small(v-for="(item,i) in tour_list" :key="i.tour_list")
+              .col-4.col-6-medium.col-12-small(v-for="(item,i) in tour_list" :key="i.tour_list" :data-tourkey="item.id")
                 section.box
-                  a.image.featured(href='#')
+                  a.image.featured(v-bind:href="item.tour_detail_url")
                     img(:src='item.image_url' alt)
                   header
+                    .h2font {{ item.agency }}
+                    </br>
                     h3 {{ item.title }}
+    
                   article
                     div
                       button.margintb.btnsize.btn.btn-outline-primary(type='button' v-for="(tag,i) in item.tags" :key="i.tags") {{ tag }}
@@ -23,7 +26,7 @@
                   article
                     div
                       a.margintb.floatF(href v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
-                        p.font-primary {{ g.date }}
+                        p.font-primary {{ g.date }} 
                         button.btnsize.btn.btn-outline-primary(type='button') 可售 {{ g.quantity }} 位
                   
                   address.inline-flex
@@ -98,7 +101,7 @@
         this.isShow = !this.isShow;
         this.isMore = !this.isMore;
       }
-    },    
+    },
   }
 </script>
 

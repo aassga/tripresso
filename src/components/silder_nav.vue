@@ -27,7 +27,8 @@
     methods: {
       chagepage(number){
         this.$emit('chagepage',number)
-      }
+      },
+      
     }
   }
 </script>
