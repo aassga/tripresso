@@ -35,18 +35,15 @@
                             ul.list-group.mb-3
                               li.list-group-item.small.p-0
                                 a.btn.btn-sm.btn-outline-primary.mb-3.ml-2(type='button' v-for="(tag,i) in item.tags" :key="i.tags") {{ tag }}
-                              // li.list-group-item.small.p-0
-                              //   a.btn.btn-sm(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
-                              //     p.mb-1.font-primary {{ g.date }} 
-                              //     a.btn.btn-sm.btn-outline-primary 可售 {{ g.quantity }} 位
-                              //   a.btn.btn-sm.btn-secondary.vl-b.mb-2(type='button' @click="toggle")
-                              //     span(v-if="isMore") 更多日期
-                              //     span(v-else) 收起日期
 
-                              datamenu(v-bind:groups="groups")
-                                a.btn.btn-sm(type='button' v-for="(g,i) in groups[i]" :key="i.groups" v-if="i< 3 || isShow")
+                              li.list-group-item.small.p-0
+                                a.btn.btn-sm(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
                                   p.mb-1.font-primary {{ g.date }} 
                                   a.btn.btn-sm.btn-outline-primary 可售 {{ g.quantity }} 位
+                                a.btn.btn-sm.btn-secondary.vl-b.mb-2(type='button' @click="toggle")
+                                  span(v-if="isMore") 更多日期
+                                  span(v-else) 收起日期
+
 
 
                             .d-flex.justify-content-between.mb-4
@@ -67,7 +64,6 @@
 <script>
   import menu_rating from './menu_rating.vue' 
   import silder_nav from './silder_nav.vue' 
-  import datamenu from './datamenu.vue' 
 
   import axios from "axios" 
   
@@ -75,7 +71,6 @@
     components: {
       menu_rating,
       silder_nav,
-      datamenu,
     },
     data() {
       return {
@@ -87,6 +82,7 @@
         tour_list:[],
         groups:[],
         isShow:false,
+        isMore:true,
       }
     },
     mounted() {
@@ -102,7 +98,7 @@
 
           var e = this.tour_list;
           this.groups = [];
-          e.forEach(item => {
+          e.forEach((item) => {
             this.groups.push(item.group);
           });
           console.log(this.groups);
@@ -120,6 +116,10 @@
       changesort(msg){
         this.list.sort = msg;
         this.getlistData();
+      },
+      toggle(){
+        this.isShow = !this.isShow;
+        this.isMore = !this.isMore;
       },
       
     },
