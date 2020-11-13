@@ -1,5 +1,5 @@
 <template lang="pug">
-  nav
+  nav.tab-content.mt-1.mb-5
     ul.pagination
       li.page-item
         a.page-link(href='#' aria-label='Previous')
