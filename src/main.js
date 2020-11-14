@@ -3,7 +3,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueResource from 'vue-resource'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import '../css/spaces.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+// import '../css/spaces.css'
 //improt css vue 放此處 排列為 VUE => JS => CSS
 
 //使用需用到的命名 放此處

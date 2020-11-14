@@ -5,9 +5,8 @@
         .row
           .col-12.text-center
             //  Logo 
-            h1
-              a(href='#')
-                img.logo-img(src='https://dszfbyatv8d2t.cloudfront.net/img/logo.svg' alt='Tripresso - 旅遊咖' title='Tripresso - 旅遊咖')
+            .col-12.row.justify-content-center.mt-4.mb-4
+              img(src='https://dszfbyatv8d2t.cloudfront.net/img/logo.svg' alt='Tripresso - 旅遊咖' title='Tripresso - 旅遊咖')
             //  Nav 
             menubox
             //  Banner 

@@ -8,7 +8,7 @@
             .tab-content.mt-4
               .tab-pane.fade.show.active#tab-grid-1(aria-labelledby='tab-grid-1-tab' role='tabpanel')
                 .row.justify-content-center
-                  .col-12.col-sm-10.col-md-6.col-lg-12.mb-4
+                  .col-12.col-sm-12.col-md-12.col-lg-12.mb-4
                     .card.border-light.mb-4.animate-up-5.boxshow(v-for="(item,i) in tour_list" :key="i.tour_list" :data-tourkey="item.id")
                       .row.no-gutters.align-items-center
                         .col-12.col-lg-6.col-xl-5
@@ -16,8 +16,7 @@
                             img.card-img.p-2.rounded-xl(:src='item.image_url' alt)
                         .col-12.col-lg-6.col-xl-7
                           .card-body.p-3.p-md-1
-                            p
-                              h4.h5.ml-2.mt-4 {{ item.title }}
+                            h5.ml-2.mt-4.font-weight-bold {{ item.title }}
                             .d-flex.my-3.ml-2
                               span.badge.badge-pill.badge-primary.mr-2 {{ item.agency }}
                               |  
@@ -32,15 +31,16 @@
                               span.star.fas.fa-star.text-warning
                               |  
                               
-                            ul.list-group.mb-3
-                              li.list-group-item.small.p-0
+                            ul.list-group.mb-3.navbar-nav
+                              li.small.p-0.nav-link
                                 a.btn.btn-sm.btn-outline-primary.mb-3.ml-2(type='button' v-for="(tag,i) in item.tags" :key="i.tags") {{ tag }}
 
-                              li.list-group-item.small.p-0
+                              li.small.p-0.nav-link
                                 a.btn.btn-sm(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
-                                  p.mb-1.font-primary {{ g.date }} 
+                                  p.mb-1.text-primary {{ g.date }} 
                                   a.btn.btn-sm.btn-outline-primary 可售 {{ g.quantity }} 位
-                                a.btn.btn-sm.btn-secondary.vl-b.mb-2(type='button' @click="toggle")
+                              li.small.p-0.nav-link    
+                                a.btn.btn-sm.btn-danger.mb-3.mt-1.ml-2(type='button' @click="toggle")
                                   span(v-if="isMore") 更多日期
                                   span(v-else) 收起日期
 
@@ -48,14 +48,14 @@
 
                             .d-flex.justify-content-between.mb-4
                               .col.pl-0.ml-2
-                                .font.font-secondary
-                                  span.font-warning {{ item.tour_days }}
+                                .text-secondary
+                                  span.font-weight-bold.text-warning {{ item.tour_days }}
                                   | 天
-                                  span.font-warning {{ item.min_price }}
+                                  span.font-weight-bold.text-warning {{ item.min_price }}
                                   | 元起
-                                .font.font-secondary.smallfont
+                                .text-secondary
                                   | 下單現賺咖幣
-                                  span.font-warning $595
+                                  span.font-weight-bold.text-warning $595
                                   | 起  
                                   
             //分頁面選單
@@ -66,7 +66,8 @@
   import silder_nav from './silder_nav.vue' 
 
   import axios from "axios" 
-  
+
+
   export default {
     components: {
       menu_rating,
@@ -121,8 +122,9 @@
         this.isShow = !this.isShow;
         this.isMore = !this.isMore;
       },
-      
+
     },
+
   }
 </script>
 <style lang="sass">
