@@ -18,7 +18,7 @@
                           .card-body.p-3.p-md-1
                             h5.ml-2.mt-4.font-weight-bold {{ item.title }}
                             .d-flex.my-3.ml-2
-                              span.badge.badge-pill.badge-primary.mr-2 {{ item.agency }}
+                              span.badge.badge-pill.badge-primary.mr-2.ml-1 {{ item.agency }}
                               |  
                               span.star.fas.fa-star.text-warning
                               |  
@@ -30,21 +30,22 @@
                               |  
                               span.star.fas.fa-star.text-warning
                               |  
-                              
+
                             ul.list-group.mb-3.navbar-nav
                               li.small.p-0.nav-link
-                                a.btn.btn-sm.btn-outline-primary.mb-3.ml-2(type='button' v-for="(tag,i) in item.tags" :key="i.tags") {{ tag }}
+                                a.ml-2.mb-2(type='button' v-for="(tag,i) in item.tags" :key="i.tags") 
+                                  span.mb-2.btn.btn-sm.btn-outline-primary {{ tag }}
 
                               li.small.p-0.nav-link
-                                a.btn.btn-sm(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
-                                  p.mb-1.text-primary {{ g.date }} 
-                                  a.btn.btn-sm.btn-outline-primary 可售 {{ g.quantity }} 位
+                                span.ml-2.mb-2.mr-2(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
+                                  p.mb-1.text-primary.small {{ g.date | datefilter }} 
+
+                                  span.mb-2.btn.btn-sm.btn-outline-primary 可售 {{ g.quantity }} 位
+
                               li.small.p-0.nav-link    
-                                a.btn.btn-sm.btn-danger.mb-3.mt-1.ml-2(type='button' @click="toggle")
-                                  span(v-if="isMore") 更多日期
-                                  span(v-else) 收起日期
-
-
+                                a.ml-2.mb-2(type='button' @click="toggle")
+                                  span.mb-2.btn.btn-sm.btn-danger(v-if="isMore") 更多日期
+                                  span.mb-2.btn.btn-sm.btn-danger(v-else) 收起日期
 
                             .d-flex.justify-content-between.mb-4
                               .col.pl-0.ml-2
@@ -66,7 +67,7 @@
   import silder_nav from './silder_nav.vue' 
 
   import axios from "axios" 
-
+  import moment from 'moment'
 
   export default {
     components: {
@@ -124,7 +125,11 @@
       },
 
     },
-
+    filters:{
+      datefilter(value){
+        return moment(value).locale('zh-tw').format('MM月/DD日 ( dd )');//加上 locale('zh-tw')顯示為中文
+      },
+    },
   }
 </script>
 <style lang="sass">

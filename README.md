@@ -25,15 +25,15 @@
   ```
   - 安裝 Vue-CLI 命令行工具
   ```
-  npm install -g @ vue / cli
+  $ npm install -g @ vue / cli
   ```
   - Pug 加入 Vue cli 專案
   ```
-  npm i vue-cli-plugin-pug
+  $ npm i vue-cli-plugin-pug
   ```
   - SASS 加入 Vue cli 專案
   ```
-  npm install sass-loader node-sass --save-dev
+  $ npm install sass-loader node-sass --save-dev
   ```
 ## 4.建置專案 
   ```
@@ -90,7 +90,14 @@
 
 ## 11.遇到開啟更多時間按鈕 bug 未解決 無法展開
 
-## 12.網站截圖
+## 12 data 日期格式化
+  ```
+  使用技術 moment 日期格式化套件
+  $ npm install vue-moment
+  moment().locale('zh-tw') 更改為中文語系
+  ```
+
+## 13.網站截圖
   - 切換評分按鈕
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_menu.png)
   - 切換價格按鈕
