@@ -88,6 +88,7 @@
 
 ## 10.2020/11/13更換版型頁面發布版本v3.0
 
+<<<<<<< HEAD
 ## 11.遇到開啟更多時間按鈕 bug 未解決 無法展開
 
 ## 12.網站截圖
@@ -95,3 +96,8 @@
   ![Image text]( imgages/Tripresso_menu.png)
   - 切換價格按鈕
   ![Image text]( imgages/Tripresso_money.png)
+=======
+## 9.2020/11/13更換版型頁面，打包上 GitHub 發布v3.0
+
+## 10.遇到開啟更多時間按鈕 bug 未解決，無法展開，考慮用日曆套件解決
+>>>>>>> develop
