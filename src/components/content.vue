@@ -46,7 +46,6 @@
                                 a.ml-2.mb-2(type='button' @click="toggle")
                                   span.mb-2.btn.btn-sm.btn-danger(v-if="isMore") 更多日期
                                   span.mb-2.btn.btn-sm.btn-danger(v-else) 收起日期
-
                             .d-flex.justify-content-between.mb-4
                               .col.pl-0.ml-2
                                 .text-secondary
