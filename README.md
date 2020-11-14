@@ -92,6 +92,6 @@
 
 ## 12.網站截圖
   - 切換評分按鈕
-  ![Image text]( imgages/Tripresso_menu.png)
+  ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_menu.png)
   - 切換價格按鈕
-  ![Image text]( imgages/Tripresso_money.png)
+  ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_money.png)
