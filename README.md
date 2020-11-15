@@ -41,6 +41,14 @@
   GitHub 管理專案版控 
   使用工具:sourcetree圖形化介面
   ```
+  - Vue Cli 運行方法 (localhost:8080~8081 本地端模擬)
+  ```
+  $ npm run serve
+  ```
+  - Vue Cli 打包
+  ```
+  $ npm run build
+  ```
 --------------------------------------------------------------------------------------------------------------------------------------------------
 ## 5.規劃 components 元件類型，並且預計規劃為
   ```
@@ -90,14 +98,18 @@
 
 ## 11.遇到開啟更多時間按鈕 bug 未解決 無法展開
 
-## 12 data 日期格式化
+## 12.評分數字顯示+小數點
+  ```
+    {{ item.rating + '.0' }} 
+  ```
+## 13 data 日期格式化
   ```
   使用技術 moment 日期格式化套件
   $ npm install vue-moment
   moment().locale('zh-tw') 更改為中文語系
   ```
 
-## 13.網站截圖
+## 14.網站截圖
   - 切換評分按鈕
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_menu.png)
   - 切換價格按鈕

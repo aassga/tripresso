@@ -18,18 +18,10 @@
                           .card-body.p-3.p-md-1
                             h5.ml-2.mt-4.font-weight-bold {{ item.title }}
                             .d-flex.my-3.ml-2
-                              span.badge.badge-pill.badge-primary.mr-2.ml-1 {{ item.agency }}
+                              span.badge.badge-pill.badge-primary.mr-2.ml-1 {{ item.agency }} 
                               |  
-                              span.star.fas.fa-star.text-warning
-                              |  
-                              span.star.fas.fa-star.text-warning
-                              |  
-                              span.star.fas.fa-star.text-warning
-                              |  
-                              span.star.fas.fa-star.text-warning
-                              |  
-                              span.star.fas.fa-star.text-warning
-                              |  
+                              span.star.fas.fa-star.small.text-warning {{ item.rating + '.0' }} 
+
 
                             ul.list-group.mb-3.navbar-nav
                               li.small.p-0.nav-link.mt-2
@@ -46,6 +38,8 @@
                                 a.ml-2.mb-2(type='button' @click="toggle")
                                   span.mb-2.btn.btn-sm.btn-danger(v-if="isMore") 更多日期
                                   span.mb-2.btn.btn-sm.btn-danger(v-else) 收起日期
+                              
+
                             .d-flex.justify-content-between.mb-4
                               .col.pl-0.ml-2
                                 .text-secondary
@@ -122,7 +116,6 @@
         this.isShow = !this.isShow;
         this.isMore = !this.isMore;
       },
-
     },
     filters:{
       datefilter(value){

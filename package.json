@@ -19,6 +19,7 @@
     "quasar": "^1.14.3",
     "vue": "^2.6.12",
     "vue-axios": "^3.1.1",
+    "vue-dynamic-star-rating": "^1.0.8",
     "vue-moment": "^4.1.0",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.4.6",
