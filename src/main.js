@@ -5,7 +5,6 @@ import VueResource from 'vue-resource'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import moment from "vue-moment"
 
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 //improt css vue 放此處 排列為 VUE => JS => CSS

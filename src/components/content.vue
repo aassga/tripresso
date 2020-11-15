@@ -30,11 +30,12 @@
 
                               li.small.p-0.nav-link.mt-2
                                 span.ml-2.mb-2.mr-2(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
-                                  p.mb-1.text-primary.small {{ g.date | datefilter }} 
+                                  p.mb-1.text-primary {{ g.date | datefilter }} 
 
                                   span.mb-2.btn.btn-sm.btn-outline-primary 可售 {{ g.quantity }} 位
 
                               li.small.p-0.nav-link    
+                                //- date-picker.ml-2.mb-2(v-model='typedata' value-type='format' range format='YYYY/MM/DD' placeholder="顯示更多日期")
                                 a.ml-2.mb-2(type='button' @click="toggle")
                                   span.mb-2.btn.btn-sm.btn-danger(v-if="isMore") 更多日期
                                   span.mb-2.btn.btn-sm.btn-danger(v-else) 收起日期
@@ -62,10 +63,16 @@
   import axios from "axios" 
   import moment from 'moment'
 
+  import DatePicker from 'vue2-datepicker';
+  import 'vue2-datepicker/locale/zh-tw';
+  import 'vue2-datepicker/index.css';
+
+
   export default {
     components: {
       menu_rating,
       silder_nav,
+      DatePicker,
     },
     data() {
       return {
@@ -78,6 +85,7 @@
         groups:[],
         isShow:false,
         isMore:true,
+        typedata:[new Date(2019, 9, 8), new Date(2019, 9, 19)],
       }
     },
     mounted() {
@@ -119,7 +127,7 @@
     },
     filters:{
       datefilter(value){
-        return moment(value).locale('zh-tw').format('MM月/DD日 ( dd )');//加上 locale('zh-tw')顯示為中文
+        return moment(value).locale('zh-tw').format('MM/DD ( dd )');//加上 locale('zh-tw')顯示為中文
       },
     },
   }
