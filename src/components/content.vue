@@ -32,11 +32,11 @@
                               |  
 
                             ul.list-group.mb-3.navbar-nav
-                              li.small.p-0.nav-link
+                              li.small.p-0.nav-link.mt-2
                                 a.ml-2.mb-2(type='button' v-for="(tag,i) in item.tags" :key="i.tags") 
-                                  span.mb-2.btn.btn-sm.btn-outline-primary {{ tag }}
+                                  span.mb-2.btn.btn-sm.btn-outline-primary.small {{ tag }}
 
-                              li.small.p-0.nav-link
+                              li.small.p-0.nav-link.mt-2
                                 span.ml-2.mb-2.mr-2(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
                                   p.mb-1.text-primary.small {{ g.date | datefilter }} 
 
