@@ -82,11 +82,13 @@
   - 使用 v-for="(item,index) in item" 將資料輸出於頁面上
   - 製作分頁切換按鈕
     ```
-    使用到元件溝通 $emit 語法技術，並在父元件層加上 v-on:語法，v-on:click 完成點擊觸發切換頁面，撈取 api 分頁資料
+    使用到元件溝通 $emit 語法技術
+    父元件層加上 v-on: 語法，v-on:click 完成點擊觸發切換頁面，撈取 api 分頁資料
     ```
   - 製作高、低切換按鈕(價格、評分) 
     ```
-    使用 boostrap vue 導航菜單套件製作，使用到元件溝通 $emit 語法技術，並在父元件層加上 v-on: 語法，v-on:click 完成點擊觸發切換頁面，撈取 api 分頁資料
+    使用 boostrap vue 導航菜單套件製作，使用到元件溝通 $emit 語法技術
+    父元件層加上 v-on: 語法，v-on:click 完成點擊觸發切換頁面，撈取 api 分頁資料
     ```
     ```
     參數切換: 
@@ -95,7 +97,7 @@
       price_desc,
       price_asc
      ```
-  - group:[],撈取所有可購買日期
+  - group:[ ] 撈取所有可購買日期
     ```
     使用 (v-for="(g,i) in item.group" :key="i.group") 撈取
     ```
