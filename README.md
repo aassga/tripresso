@@ -123,10 +123,12 @@
   - 切換評分按鈕
     # 評分高結果
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_rating_desc.png)
+  - 切換評分按鈕
     # 評分低結果
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_rating_asc.png)
   - 切換價格按鈕
     # 價格高結果
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_price_desc.png)
+  - 切換價格按鈕
     # 價格低結果
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_price_asc.png)
