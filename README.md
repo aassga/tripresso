@@ -56,26 +56,38 @@
   ```
   使用 pug + scss/sass 進行編輯器撰寫
   ```
-## 7.串接 API 過程以及遇到問題 -->
-  - 在網址 url:http://interview.tripresso.com/tour/search 後加上 
-    --> ?page=${this.list.page}&row_per_page=${this.list.row_per_page}&sort=${this.list.sort} 判定 get 是否正確回傳參數資料
+## 7.串接 API 過程以及遇到問題 
+  - 在網址 url:http://interview.tripresso.com/tour/search 後加上 ?page=${this.list.page}&row_per_page=${this.list.row_per_page}&sort=${this.list.sort} 判定 get 是否正確回傳參數資料
   - 使用 vue axios 完成串接 api 
+    ```
     console.log(this.list)
     console.log(this.tour_list)
-    F12 確認是否有顯現資料 data 
-  - API 串接 需搞懂物件層數邏輯 --> 選擇用 v-for 語法來撈取資料
+    F12(開發者) 確認是否有顯現資料 data 
+    ```
+  - API 串接 需搞懂物件層數邏輯 
+    ```
+    v-for 語法來撈取資料
+    ```
   - API 分為 ( 3層物件資料需做處理 )
-    ```data: { 
+    ```
+    data: { 
       tour_list: [
         {
           tags: [],
           group: [],
         }
       ],
-    }```
+    }
+    ```
   - 使用 v-for="(item,index) in item" 將資料輸出於頁面上
-  - 製作分頁切換按鈕，使用到元件溝通 $emit 語法技術，並在父元件層加上 v-on:語法，v-on:click 完成點擊觸發切換頁面，撈取 api 分頁資料
-  - 製作高、低切換按鈕(價格、評分) 使用 ElementUI NavMenu導航菜單套件製作，使用到元件溝通 $emit 語法技術，並在父元件層加上 v-on: 語法，v-on:click 完成點擊觸發切換頁面，撈取 api 分頁資料
+  - 製作分頁切換按鈕
+    ```
+    使用到元件溝通 $emit 語法技術，並在父元件層加上 v-on:語法，v-on:click 完成點擊觸發切換頁面，撈取 api 分頁資料
+    ```
+  - 製作高、低切換按鈕(價格、評分) 
+    ```
+    使用 boostrap vue 導航菜單套件製作，使用到元件溝通 $emit 語法技術，並在父元件層加上 v-on: 語法，v-on:click 完成點擊觸發切換頁面，撈取 api 分頁資料
+    ```
     ```
     參數切換: 
       rating_desc,
@@ -83,24 +95,29 @@
       price_desc,
       price_asc
      ```
-  - group:[],撈取所有可購買日期,設定判斷超過三個以上日期時自動隱藏，使用 v-if="i < 3 || isShow" 技術判斷起始值
-  - 設定展開更多可購買日期以及收起日期按鈕，使用技術 v-if、v-else，判定展開與否
+  - group:[],撈取所有可購買日期
+    ```
+    使用 (v-for="(g,i) in item.group" :key="i.group") 撈取
+    ```
+  - 設定更多可購買日期，使用 vue2-datepicker 套件製作 
+    ``` 
+    $ npm install vue2-datepicker --save
+    ```
 ## 8.頁面，串接 API 完成，打包上 GitHub 發布版本v2.0
 ## 9.保留一天測試 debug 頁面問題
 ## 10.2020/11/13更換版型頁面發布版本v3.0
-## 11.遇到開啟更多時間按鈕 bug 未解決 無法展開
-## 12.評分數字顯示+小數點
+## 11.評分數字顯示+小數點
   ```
     {{ item.rating + '.0' }} 
   ```
-## 13 data 日期格式化
+## 12 data 日期格式化
   ```
   使用技術 moment 日期格式化套件
   $ npm install vue-moment
   moment().locale('zh-tw') 更改為中文語系
   ``` 
-## 14 2020/11/16更換版型頁面發布版本v4.0
-## 15.網站截圖
+## 13 2020/11/16更換版型頁面發布版本v4.0
+## 14.網站截圖
   - 切換評分按鈕
   ```
   評分高結果
