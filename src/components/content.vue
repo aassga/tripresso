@@ -24,21 +24,23 @@
 
 
                             ul.list-group.mb-3.navbar-nav
-                              li.small.p-0.nav-link.mt-2
-                                a.ml-2.mb-2(type='button' v-for="(tag,i) in item.tags" :key="i.tags") 
-                                  span.mb-2.btn.btn-sm.btn-outline-primary.small {{ tag }}
+                              li.small.p-0.nav-link.mt-2.mb-3
+                                a.ml-2.mr-2(type='button' v-for="(tag,i) in item.tags" :key="i.tags") 
+                                  span.btn.btn-sm.btn-outline-info.small {{ tag }}
 
-                              li.small.p-0.nav-link.mt-2
-                                span.ml-2.mb-2.mr-2(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 3 || isShow")
+                              li.small.p-0.nav-link.mt-2.mb-3
+                                span.ml-2.mr-2(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i = 3 || isShow")
                                   p.mb-1.text-primary {{ g.date | datefilter }} 
+                                  span.btn.btn-sm.btn-primary.small 可售 {{ g.quantity }} 位
 
-                                  span.mb-2.btn.btn-sm.btn-outline-primary 可售 {{ g.quantity }} 位
 
                               li.small.p-0.nav-link    
-                                //- date-picker.ml-2.mb-2(v-model='typedata' value-type='format' range format='YYYY/MM/DD' placeholder="顯示更多日期")
-                                a.ml-2.mb-2(type='button' @click="toggle")
-                                  span.mb-2.btn.btn-sm.btn-danger(v-if="isMore") 更多日期
-                                  span.mb-2.btn.btn-sm.btn-danger(v-else) 收起日期
+
+                                daytype
+
+                                // a.ml-2.mb-2(type='button' @click="toggle")
+                                //   span.mb-2.btn.btn-sm.btn-danger(v-if="isMore") 更多日期
+                                //   span.mb-2.btn.btn-sm.btn-danger(v-else) 收起日期
                               
 
                             .d-flex.justify-content-between.mb-4
@@ -58,21 +60,17 @@
 </template>
 <script>
   import menu_rating from './menu_rating.vue' 
-  import silder_nav from './silder_nav.vue' 
+  import silder_nav from './silder_nav.vue'
+  import daytype from './daytype.vue'
 
   import axios from "axios" 
   import moment from 'moment'
-
-  import DatePicker from 'vue2-datepicker';
-  import 'vue2-datepicker/locale/zh-tw';
-  import 'vue2-datepicker/index.css';
-
 
   export default {
     components: {
       menu_rating,
       silder_nav,
-      DatePicker,
+      daytype,
     },
     data() {
       return {
@@ -85,7 +83,6 @@
         groups:[],
         isShow:false,
         isMore:true,
-        typedata:[new Date(2019, 9, 8), new Date(2019, 9, 19)],
       }
     },
     mounted() {
