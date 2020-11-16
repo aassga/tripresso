@@ -111,6 +111,15 @@
 
 ## 14.網站截圖
   - 切換評分按鈕
-  ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_menu.png)
+
+  -- 評分高
+  ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_rating_desc.png)
+  -- 評分低
+  ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_rating_asc.png)
+
   - 切換價格按鈕
-  ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_money.png)
+  
+  -- 價格高
+  ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_price_desc.png)
+  -- 價格高
+  ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_price_asc.png)
