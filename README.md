@@ -19,21 +19,21 @@
   ```
 ## 3.環境建立
   - 下載 node.js 安裝 npm
-  ```
-  https://nodejs.org/zh-tw/download/
-  ```
+    ```
+    https://nodejs.org/zh-tw/download/
+    ```
   - 安裝 Vue-CLI 命令行工具
-  ```
-  $ npm install -g @ vue / cli
-  ```
+    ```
+    $ npm install -g @ vue / cli
+    ```
   - Pug 加入 Vue cli 專案
-  ```
-  $ npm i vue-cli-plugin-pug
-  ```
+    ```
+    $ npm i vue-cli-plugin-pug
+    ```
   - SASS 加入 Vue cli 專案
-  ```
-  $ npm install sass-loader node-sass --save-dev
-  ```
+    ```
+    $ npm install sass-loader node-sass --save-dev
+    ```
 ## 4.建置專案 
   ```
   使用 Vue Cli 建置專案 
@@ -41,13 +41,13 @@
   使用工具:sourcetree圖形化介面
   ```
   - Vue Cli 運行方法 (localhost:8080~8081 本地端模擬)
-  ```
-  $ npm run serve
-  ```
+    ```
+    $ npm run serve
+    ```
   - Vue Cli 打包
-  ```
-  $ npm run build
-  ```
+    ```
+    $ npm run build
+    ```
 ## 5.規劃 components 元件類型，並且預計規劃為
   ```
   header、content、footer、menu、menu_rating、daytype、silder_nav 建立七種 components 元件
@@ -121,20 +121,20 @@
 ## 13.2020/11/16更換版型頁面發布版本v4.0
 ## 14.網站截圖
   - 切換評分按鈕
-  ```
-  評分高結果
-  ```
+    ```
+    評分高結果
+    ```
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_rating_desc.png)
-  ```
-  評分低結果
-  ```
+    ```
+    評分低結果
+    ```
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_rating_asc.png)
   - 切換價格按鈕
-  ```
-  價格高結果
-  ```
+    ```
+    價格高結果
+    ```
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_price_desc.png)
-  ```
-  價格高結果
-  ```
+    ```
+    價格高結果
+    ```
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_price_asc.png)
