@@ -138,26 +138,34 @@
   ```
   npm install --save vue-scrollto
   ``` 
+  - 文章資源 
+    ```    
+    Day29 Vue CLI專案實作(三)：VueScrollTo套件應用
+    https://ithelp.ithome.com.tw/articles/10227744
+   
+    vue-scrollto
+    https://vue-scrollto.netlify.app/
+    ```  
   - main.js 內加上
-  ```
-  //滾動滑動
-  var VueScrollTo = require('vue-scrollto');
-  Vue.use(VueScrollTo, {
-    container: "body",
-    duration: 2000,
-    easing: "ease",
-    offset: 0,
-    force: true,
-    cancelable: true,
-    onStart: false,
-    onDone: false,
-    onCancel: false,
-    x: false,
-    y: true
-  })
-  //滾動滑動
+    ```
+    //滾動滑動
+    var VueScrollTo = require('vue-scrollto');
+    Vue.use(VueScrollTo, {
+      container: "body",
+      duration: 2000,
+      easing: "ease",
+      offset: 0,
+      force: true,
+      cancelable: true,
+      onStart: false,
+      onDone: false,
+      onCancel: false,
+      x: false,
+      y: true
+    })
+    //滾動滑動
 
-  使用方式 v-scroll-to="'#移動位置'"
+    使用方式 v-scroll-to="'#移動位置'"
 
-  ```
+    ```
   
