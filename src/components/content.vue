@@ -85,9 +85,11 @@
         isMore:true,
       }
     },
+    //mounted資料寫入data
     mounted() {
       this.getlistData();
     },
+    //methods動態事件綁定
     methods: {
       getlistData(){
         const url = `https://interview.tripresso.com/tour/search?page=${this.list.page}&row_per_page=${this.list.row_per_page}&sort=${this.list.sort}`;
@@ -109,6 +111,7 @@
           console.log(err);
         });
       },
+      
       chagepage(number){     
         this.list.page = number;
         this.getlistData();

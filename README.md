@@ -132,3 +132,32 @@
   - 切換價格按鈕
     ### 價格低結果
   ![Image text](https://github.com/aassga/tripresso/blob/feature/tripresso_v1.0/Tripresso_price_asc.png)
+
+
+## 15.新增UI友善滑動 vue-scrollto
+  ```
+  npm install --save vue-scrollto
+  ``` 
+  - main.js 內加上
+  ```
+  //滾動滑動
+  var VueScrollTo = require('vue-scrollto');
+  Vue.use(VueScrollTo, {
+    container: "body",
+    duration: 2000,
+    easing: "ease",
+    offset: 0,
+    force: true,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+  })
+  //滾動滑動
+
+  使用方式 v-scroll-to="'#移動位置'"
+
+  ```
+  

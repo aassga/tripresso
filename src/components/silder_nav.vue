@@ -5,13 +5,13 @@
         a.page-link(href='#' aria-label='Previous')
           span(aria-hidden='true') «
       li.page-item
-        a.page-link(href='#' @click.prevent="chagepage(1)") 1
+        a.page-link(href='#' v-scroll-to="'#main'" v-on:click.prevent="chagepage(1)") 1
       li.page-item
-        a.page-link(href='#' @click.prevent="chagepage(2)") 2
+        a.page-link(href='#' v-scroll-to="'#main'" v-on:click.prevent="chagepage(2)") 2
       li.page-item
-        a.page-link(href='#' @click.prevent="chagepage(3)") 3
+        a.page-link(href='#' v-scroll-to="'#main'" v-on:click.prevent="chagepage(3)") 3
       li.page-item
-        a.page-link(href='#' @click.prevent="chagepage(4)") 4
+        a.page-link(href='#' v-scroll-to="'#main'" v-on:click.prevent="chagepage(4)") 4
       li.page-item
         a.page-link(href='#' aria-label='Next')
           span(aria-hidden='true') »  
@@ -28,7 +28,6 @@
       chagepage(number){
         this.$emit('chagepage',number)
       },
-      
     }
   }
 </script>
