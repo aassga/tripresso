@@ -29,7 +29,7 @@
                                   span.btn.btn-sm.btn-outline-info.small {{ tag }}
 
                               li.small.p-0.nav-link.mt-2
-                                span.ml-2.mr-2.mb-3(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i = 3 || isShow")
+                                span.ml-2.mr-2.mb-3(type='button' v-for="(g,i) in item.group" :key="i.group" v-if="i < 6 || isShow")
                                   p.mb-1.text-primary {{ g.date | datefilter }} 
                                   span.btn.btn-sm.btn-primary.small 可售 {{ g.quantity }} 位
 
